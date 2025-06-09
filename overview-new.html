@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Strategic Facilitation ROI Guide</title>
+    <title>The Strategic Facilitation ROI Guide - PDF</title>
     <style>
         * {
             margin: 0;
@@ -27,45 +27,47 @@
 
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
+            line-height: 1.6;
             color: var(--text-dark);
             background: var(--white);
+            font-size: 11pt;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
             max-width: 8.5in;
             margin: 0 auto;
             padding: 0.75in;
-        }
-
-        .pdf-container {
+            min-height: 10.5in;
             background: var(--white);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            min-height: 11in;
         }
 
         /* Header */
         .header {
             text-align: center;
-            padding: 2rem 0 3rem;
+            padding: 1.5rem 0 2rem;
             border-bottom: 3px solid var(--accent-bright);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 28pt;
             font-weight: 700;
             color: var(--primary-dark);
             margin-bottom: 0.5rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         .header .subtitle {
-            font-size: 1.3rem;
+            font-size: 16pt;
             color: var(--accent-orange);
             font-weight: 400;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .header .tagline {
-            font-size: 1.1rem;
+            font-size: 12pt;
             color: var(--medium-gray);
             font-style: italic;
         }
@@ -73,337 +75,355 @@
         /* Byline */
         .byline {
             text-align: center;
-            margin-bottom: 3rem;
-            padding: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
             background: var(--light-gray);
-            border-radius: 8px;
+            border-radius: 5px;
         }
 
         .byline .author {
-            font-size: 1.1rem;
+            font-size: 12pt;
             font-weight: 600;
             color: var(--primary-dark);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .byline .credentials {
-            font-size: 0.95rem;
+            font-size: 10pt;
             color: var(--medium-gray);
         }
 
         /* Executive Summary Box */
         .executive-summary {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-navy));
+            background: var(--primary-dark);
             color: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
         }
 
         .executive-summary h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 14pt;
+            margin-bottom: 0.75rem;
             color: var(--accent-orange);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         .executive-summary p {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            opacity: 0.95;
+            font-size: 11pt;
+            line-height: 1.5;
         }
 
         /* Section Headings */
         .section-title {
-            font-size: 1.8rem;
+            font-size: 16pt;
             font-weight: 700;
             color: var(--primary-dark);
-            margin: 3rem 0 1.5rem;
-            padding-bottom: 0.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.25rem;
             border-bottom: 2px solid var(--accent-bright);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         .subsection-title {
-            font-size: 1.4rem;
+            font-size: 13pt;
             font-weight: 600;
             color: var(--primary-navy);
-            margin: 2rem 0 1rem;
-            font-family: 'Segoe UI', sans-serif;
+            margin: 1.5rem 0 0.75rem;
+            font-family: 'Arial', sans-serif;
         }
 
         /* ROI Stats Grid */
         .roi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
         .roi-stat {
             background: var(--white);
             border: 2px solid var(--border-light);
-            border-radius: 8px;
-            padding: 1.5rem;
+            border-radius: 5px;
+            padding: 1rem;
             text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .roi-stat:hover {
-            border-color: var(--accent-bright);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
         }
 
         .roi-number {
-            font-size: 2.5rem;
+            font-size: 20pt;
             font-weight: 700;
             color: var(--success-green);
-            margin-bottom: 0.5rem;
-            font-family: 'Segoe UI', sans-serif;
+            margin-bottom: 0.25rem;
+            font-family: 'Arial', sans-serif;
         }
 
         .roi-label {
-            font-size: 0.9rem;
+            font-size: 9pt;
             color: var(--medium-gray);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
         }
 
         .roi-description {
-            font-size: 1rem;
+            font-size: 10pt;
             color: var(--text-dark);
-            margin-top: 0.5rem;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         /* Problem-Solution Framework */
         .framework-box {
             background: var(--light-gray);
-            border-left: 5px solid var(--accent-orange);
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
+            border-left: 4px solid var(--accent-orange);
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
         }
 
         .framework-box h3 {
-            font-size: 1.3rem;
+            font-size: 12pt;
             font-weight: 600;
             color: var(--primary-dark);
-            margin-bottom: 1rem;
-            font-family: 'Segoe UI', sans-serif;
+            margin-bottom: 0.75rem;
+            font-family: 'Arial', sans-serif;
         }
 
         /* Persona Sections */
         .persona-section {
             background: var(--white);
             border: 1px solid var(--border-light);
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
         }
 
         .persona-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .persona-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--accent-bright);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--white);
-            margin-right: 1rem;
-            font-weight: 700;
+            margin-bottom: 1rem;
         }
 
         .persona-title {
-            font-size: 1.4rem;
+            font-size: 13pt;
             font-weight: 600;
             color: var(--primary-dark);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         /* Case Study Box */
         .case-study {
-            background: linear-gradient(135deg, var(--success-green), #2ecc71);
+            background: var(--success-green);
             color: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
         }
 
         .case-study h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-size: 13pt;
+            margin-bottom: 0.75rem;
+            font-family: 'Arial', sans-serif;
         }
 
         .case-study .metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-top: 1rem;
         }
 
         .metric-item {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.75rem;
+            border-radius: 3px;
         }
 
         .metric-value {
-            font-size: 1.8rem;
+            font-size: 14pt;
             font-weight: 700;
             margin-bottom: 0.25rem;
         }
 
         .metric-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            font-size: 9pt;
         }
 
         /* CTA Section */
         .cta-section {
             background: var(--primary-dark);
             color: var(--white);
-            padding: 2.5rem;
-            border-radius: 8px;
+            padding: 2rem;
+            border-radius: 5px;
             text-align: center;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
         .cta-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 16pt;
+            margin-bottom: 0.75rem;
             color: var(--accent-orange);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         .cta-section p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 11pt;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0 1rem;
+            flex-wrap: wrap;
         }
 
         .cta-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 12pt;
+            font-weight: 600;
+            text-decoration: none;
             display: inline-block;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .cta-button.primary {
             background: var(--accent-orange);
             color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            font-family: 'Segoe UI', sans-serif;
+            border: 2px solid var(--accent-orange);
+        }
+
+        .cta-button.secondary {
+            background: var(--white);
+            color: var(--primary-dark);
+            border: 2px solid var(--white);
         }
 
         .cta-button:hover {
-            background: #d35400;
             transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .contact-info {
+            font-size: 12pt;
+            font-weight: 600;
+            color: var(--accent-orange);
+            margin-top: 1rem;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             border-top: 1px solid var(--border-light);
-            margin-top: 3rem;
+            margin-top: 2rem;
             color: var(--medium-gray);
-            font-size: 0.9rem;
+            font-size: 9pt;
         }
 
         /* Bullet Points */
         ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
+            margin: 0.75rem 0;
+            padding-left: 1.5rem;
         }
 
         li {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
         }
 
         /* Emphasis */
         .highlight {
             text-decoration: underline;
             text-decoration-color: var(--warning-yellow);
-            text-decoration-thickness: 3px;
-            text-underline-offset: 3px;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
             font-weight: 600;
         }
 
         .stat-callout {
-            font-size: 1.2rem;
+            font-size: 12pt;
             font-weight: 700;
             color: var(--success-green);
         }
 
         /* Citations */
         .citation {
-            font-size: 0.75rem;
+            font-size: 8pt;
             vertical-align: super;
             color: var(--accent-bright);
-            text-decoration: none;
             font-weight: 600;
         }
 
-        .citation:hover {
-            color: var(--accent-orange);
-        }
-
         .footnotes {
-            margin-top: 3rem;
-            padding-top: 2rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid var(--border-light);
-            font-size: 0.85rem;
+            font-size: 9pt;
             color: var(--medium-gray);
         }
 
         .footnotes h3 {
-            font-size: 1.1rem;
+            font-size: 11pt;
             color: var(--primary-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .footnote {
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
-        /* Page breaks for PDF */
+        /* Page breaks */
         .page-break {
             page-break-before: always;
         }
 
+        /* Print optimizations */
         @media print {
             body {
-                padding: 0.5in;
-                font-size: 12pt;
+                font-size: 10pt;
                 line-height: 1.4;
             }
             
+            .page {
+                padding: 0.5in;
+            }
+            
             .header h1 {
-                font-size: 24pt;
+                font-size: 22pt;
             }
             
             .section-title {
-                font-size: 18pt;
+                font-size: 14pt;
             }
+            
+            .roi-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .case-study .metrics {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @page {
+            margin: 0.5in;
+            size: letter;
         }
     </style>
 </head>
 <body>
-    <div class="pdf-container">
+    <div class="page">
         <!-- Header -->
         <div class="header">
             <h1>The Strategic Facilitation Advantage</h1>
@@ -420,7 +440,7 @@
         <!-- Executive Summary -->
         <div class="executive-summary">
             <h2>Executive Summary</h2>
-            <p>In today's hyper-connected business environment, <span class="highlight">82% of executives report that misalignment costs their organizations an average of $62 million annually</span><a href="#fn1" class="citation">1</a>. Yet the same leaders who invest millions in technology and talent often overlook the single most predictable path to breakthrough performance: strategic facilitation<a href="#fn2" class="citation">2</a>. This guide reveals why the smartest leaders are treating facilitation as a competitive advantage—and the measurable ROI that follows.</p>
+            <p>In today's hyper-connected business environment, <span class="highlight">82% of executives report that misalignment costs their organizations an average of $62 million annually</span><span class="citation">1</span>. Yet the same leaders who invest millions in technology and talent often overlook the single most predictable path to breakthrough performance: strategic facilitation<span class="citation">2</span>. This guide reveals why the smartest leaders are treating facilitation as a competitive advantage—and the measurable ROI that follows.</p>
         </div>
 
         <!-- The Hidden Cost of Misalignment -->
@@ -430,26 +450,26 @@
             <div class="roi-stat">
                 <div class="roi-number">67%</div>
                 <div class="roi-label">Project Failure Rate</div>
-                <div class="roi-description">Due to poor stakeholder alignment and unclear objectives<a href="#fn3" class="citation">3</a></div>
+                <div class="roi-description">Due to poor stakeholder alignment and unclear objectives<span class="citation">3</span></div>
             </div>
             <div class="roi-stat">
                 <div class="roi-number">23hrs</div>
                 <div class="roi-label">Weekly Waste</div>
-                <div class="roi-description">Average time lost per employee to unclear priorities and miscommunication<a href="#fn4" class="citation">4</a></div>
+                <div class="roi-description">Average time lost per employee to unclear priorities and miscommunication<span class="citation">4</span></div>
             </div>
             <div class="roi-stat">
                 <div class="roi-number">$37M</div>
                 <div class="roi-label">Annual Impact</div>
-                <div class="roi-description">Average cost of strategic misalignment for mid-sized companies (500+ employees)<a href="#fn5" class="citation">5</a></div>
+                <div class="roi-description">Average cost of strategic misalignment for mid-sized companies (500+ employees)<span class="citation">5</span></div>
             </div>
             <div class="roi-stat">
                 <div class="roi-number">156%</div>
                 <div class="roi-label">Turnover Increase</div>
-                <div class="roi-description">Higher in organizations with poor internal alignment and unclear vision<a href="#fn6" class="citation">6</a></div>
+                <div class="roi-description">Higher in organizations with poor internal alignment and unclear vision<span class="citation">6</span></div>
             </div>
         </div>
 
-        <p>These aren't just statistics—they're symptoms of a deeper challenge. <span class="highlight">The most innovative organizations aren't just solving technical problems; they're solving human coordination problems at scale.</span><a href="#fn7" class="citation">7</a></p>
+        <p>These aren't just statistics—they're symptoms of a deeper challenge. <span class="highlight">The most innovative organizations aren't just solving technical problems; they're solving human coordination problems at scale.</span><span class="citation">7</span></p>
 
         <div class="framework-box">
             <h3>The Alignment Paradox</h3>
@@ -459,7 +479,7 @@
         <!-- The Strategic Facilitation Solution -->
         <h2 class="section-title">The Strategic Facilitation Solution</h2>
 
-        <p>Strategic facilitation isn't about running better meetings—it's about designing breakthrough moments that fundamentally shift how teams think, decide, and act together<a href="#fn8" class="citation">8</a>. The ROI is both immediate and compound:</p>
+        <p>Strategic facilitation isn't about running better meetings—it's about designing breakthrough moments that fundamentally shift how teams think, decide, and act together<span class="citation">8</span>. The ROI is both immediate and compound:</p>
 
         <div class="case-study">
             <h3>Real-World Impact: Series B HealthTech Company</h3>
@@ -484,18 +504,19 @@
             </div>
         </div>
 
+        <div class="page-break"></div>
+
         <!-- Target Audience Analysis -->
         <h2 class="section-title">Why This Matters for Your Organization</h2>
 
         <!-- Persona 1: Innovation Leaders -->
         <div class="persona-section">
             <div class="persona-header">
-                <div class="persona-icon">🏥</div>
-                <div class="persona-title">Innovation Leaders in Health & Wellness Tech</div>
+                <div class="persona-title">🏥 Innovation Leaders in Health & Wellness Tech</div>
             </div>
             <p><strong>Your Challenge:</strong> Balancing mission-driven innovation with investor expectations while coordinating complex, cross-functional teams in a rapidly evolving regulatory landscape.</p>
             
-            <p><strong>The Facilitation Advantage:</strong> Strategic facilitation helps you maintain authentic mission alignment while accelerating product development cycles. <span class="stat-callout">Companies with strong facilitation practices launch products 40% faster</span><a href="#fn9" class="citation">9</a> because they eliminate the costly cycles of misalignment and rework.</p>
+            <p><strong>The Facilitation Advantage:</strong> Strategic facilitation helps you maintain authentic mission alignment while accelerating product development cycles. <span class="stat-callout">Companies with strong facilitation practices launch products 40% faster</span><span class="citation">9</span> because they eliminate the costly cycles of misalignment and rework.</p>
             
             <ul>
                 <li><strong>Patient Journey Clarity:</strong> Transform complex user research into actionable product roadmaps</li>
@@ -507,12 +528,11 @@
         <!-- Persona 2: Design/Product Leaders -->
         <div class="persona-section">
             <div class="persona-header">
-                <div class="persona-icon">🎨</div>
-                <div class="persona-title">Heads of Design & Product at Scaling SaaS Companies</div>
+                <div class="persona-title">🎨 Heads of Design & Product at Scaling SaaS Companies</div>
             </div>
             <p><strong>Your Challenge:</strong> Managing increasingly complex product portfolios while maintaining design coherence and user experience quality across multiple teams and stakeholders.</p>
             
-            <p><strong>The Facilitation Advantage:</strong> Strategic facilitation creates the alignment frameworks your scaling teams desperately need. <span class="stat-callout">Organizations with strong facilitation practices reduce design debt by 60%</span><a href="#fn10" class="citation">10</a> and ship cohesive experiences consistently.</p>
+            <p><strong>The Facilitation Advantage:</strong> Strategic facilitation creates the alignment frameworks your scaling teams desperately need. <span class="stat-callout">Organizations with strong facilitation practices reduce design debt by 60%</span><span class="citation">10</span> and ship cohesive experiences consistently.</p>
             
             <ul>
                 <li><strong>Design System Alignment:</strong> Get entire product teams bought into consistent design principles</li>
@@ -524,12 +544,11 @@
         <!-- Persona 3: L&D Planners -->
         <div class="persona-section">
             <div class="persona-header">
-                <div class="persona-icon">🌱</div>
-                <div class="persona-title">L&D Leaders at Conscious Corporates</div>
+                <div class="persona-title">🌱 L&D Leaders at Conscious Corporates</div>
             </div>
             <p><strong>Your Challenge:</strong> Creating meaningful leadership development experiences that drive both individual growth and organizational performance in cultures that value both results and humanity.</p>
             
-            <p><strong>The Facilitation Advantage:</strong> Strategic facilitation bridges the gap between personal development and business outcomes. <span class="stat-callout">Companies investing in facilitated leadership development see 25% higher employee engagement</span><a href="#fn11" class="citation">11</a> and 19% better financial performance<a href="#fn12" class="citation">12</a>.</p>
+            <p><strong>The Facilitation Advantage:</strong> Strategic facilitation bridges the gap between personal development and business outcomes. <span class="stat-callout">Companies investing in facilitated leadership development see 25% higher employee engagement</span><span class="citation">11</span> and 19% better financial performance<span class="citation">12</span>.</p>
             
             <ul>
                 <li><strong>Authentic Leadership Development:</strong> Develop leaders who can navigate complexity with both clarity and compassion</li>
@@ -544,29 +563,31 @@
         <div class="framework-box">
             <h3>Immediate Returns (0-90 days)</h3>
             <ul>
-                <li><strong>Decision Velocity:</strong> 35-50% reduction in time-to-decision on complex issues<a href="#fn13" class="citation">13</a></li>
-                <li><strong>Meeting Efficiency:</strong> 40% reduction in meeting time with 60% better outcomes<a href="#fn14" class="citation">14</a></li>
-                <li><strong>Project Clarity:</strong> 80% improvement in shared understanding of project objectives<a href="#fn15" class="citation">15</a></li>
+                <li><strong>Decision Velocity:</strong> 35-50% reduction in time-to-decision on complex issues<span class="citation">13</span></li>
+                <li><strong>Meeting Efficiency:</strong> 40% reduction in meeting time with 60% better outcomes<span class="citation">14</span></li>
+                <li><strong>Project Clarity:</strong> 80% improvement in shared understanding of project objectives<span class="citation">15</span></li>
             </ul>
         </div>
 
         <div class="framework-box">
             <h3>Medium-Term Impact (3-12 months)</h3>
             <ul>
-                <li><strong>Innovation Acceleration:</strong> 25-40% faster product development cycles<a href="#fn16" class="citation">16</a></li>
-                <li><strong>Employee Retention:</strong> 30% improvement in retention among high performers<a href="#fn17" class="citation">17</a></li>
-                <li><strong>Customer Satisfaction:</strong> 20% improvement in product-market fit metrics<a href="#fn18" class="citation">18</a></li>
+                <li><strong>Innovation Acceleration:</strong> 25-40% faster product development cycles<span class="citation">16</span></li>
+                <li><strong>Employee Retention:</strong> 30% improvement in retention among high performers<span class="citation">17</span></li>
+                <li><strong>Customer Satisfaction:</strong> 20% improvement in product-market fit metrics<span class="citation">18</span></li>
             </ul>
         </div>
 
         <div class="framework-box">
             <h3>Long-Term Competitive Advantage (12+ months)</h3>
             <ul>
-                <li><strong>Organizational Resilience:</strong> 50% better adaptation to market changes<a href="#fn19" class="citation">19</a></li>
-                <li><strong>Leadership Capability:</strong> 3x improvement in internal leadership pipeline strength<a href="#fn20" class="citation">20</a></li>
-                <li><strong>Market Position:</strong> Sustainable competitive advantages through superior coordination<a href="#fn21" class="citation">21</a></li>
+                <li><strong>Organizational Resilience:</strong> 50% better adaptation to market changes<span class="citation">19</span></li>
+                <li><strong>Leadership Capability:</strong> 3x improvement in internal leadership pipeline strength<span class="citation">20</span></li>
+                <li><strong>Market Position:</strong> Sustainable competitive advantages through superior coordination<span class="citation">21</span></li>
             </ul>
         </div>
+
+        <div class="page-break"></div>
 
         <!-- The Strategic Approach -->
         <h2 class="section-title">Beyond Traditional Facilitation: The Strategic Difference</h2>
@@ -613,34 +634,42 @@
         <div class="cta-section">
             <h2>Ready to Transform Your Strategic Advantage?</h2>
             <p>The organizations that thrive in the next decade won't just have better technology or more talented people—they'll have superior coordination. Strategic facilitation is how you build that competitive advantage.</p>
-            <p>Let's explore what strategic facilitation could mean for your organization. Book a complimentary strategy call to discuss your specific challenges and opportunities.</p>
-            <a href="#" class="cta-button">Schedule Your Strategy Call</a>
+            <p>Let's explore what strategic facilitation could mean for your organization.</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="cta-button primary">Schedule Your Strategy Call</a>
+                <a href="#" class="cta-button secondary">Download This PDF Guide</a>
+            </div>
+            
+            <div class="contact-info">
+                Contact Tyler McCoy to discuss your specific challenges and opportunities
+            </div>
         </div>
 
         <!-- Footnotes -->
         <div class="footnotes">
             <h3>References</h3>
-            <div class="footnote" id="fn1">1. Harvard Business Review, "The Cost of Poor Communication" (2024)</div>
-            <div class="footnote" id="fn2">2. McKinsey Global Institute, "The Power of Organizational Alignment" (2024)</div>
-            <div class="footnote" id="fn3">3. Project Management Institute, "Pulse of the Profession Report" (2024)</div>
-            <div class="footnote" id="fn4">4. Gallup, "State of the Global Workplace" (2024)</div>
-            <div class="footnote" id="fn5">5. Deloitte, "Strategic Misalignment: The Hidden Cost of Growth" (2023)</div>
-            <div class="footnote" id="fn6">6. MIT Sloan Management Review, "Culture and Performance Study" (2024)</div>
-            <div class="footnote" id="fn7">7. Stanford Business School, "Innovation Through Coordination" (2024)</div>
-            <div class="footnote" id="fn8">8. Journal of Applied Psychology, "Team Facilitation and Performance" (2023)</div>
-            <div class="footnote" id="fn9">9. Boston Consulting Group, "Speed and Alignment in Product Development" (2024)</div>
-            <div class="footnote" id="fn10">10. Nielsen Norman Group, "Design Debt in Scaling Organizations" (2024)</div>
-            <div class="footnote" id="fn11">11. Corporate Leadership Council, "Engagement Through Development" (2024)</div>
-            <div class="footnote" id="fn12">12. Harvard Business Review, "Leadership Development ROI Study" (2023)</div>
-            <div class="footnote" id="fn13">13. Decision Sciences Institute, "Group Decision Making Efficiency" (2024)</div>
-            <div class="footnote" id="fn14">14. Microsoft Work Trend Index, "Meeting Effectiveness Research" (2024)</div>
-            <div class="footnote" id="fn15">15. Project Management Journal, "Stakeholder Alignment Metrics" (2023)</div>
-            <div class="footnote" id="fn16">16. Accenture, "Innovation Velocity in Digital Organizations" (2024)</div>
-            <div class="footnote" id="fn17">17. Society for Human Resource Management, "Retention Strategies Study" (2024)</div>
-            <div class="footnote" id="fn18">18. Bain & Company, "Product-Market Fit Acceleration" (2023)</div>
-            <div class="footnote" id="fn19">19. MIT Technology Review, "Organizational Resilience Factors" (2024)</div>
-            <div class="footnote" id="fn20">20. Center for Creative Leadership, "Leadership Pipeline Development" (2024)</div>
-            <div class="footnote" id="fn21">21. Strategic Management Journal, "Coordination as Competitive Advantage" (2024)</div>
+            <div class="footnote">1. Harvard Business Review, "The Cost of Poor Communication" (2024)</div>
+            <div class="footnote">2. McKinsey Global Institute, "The Power of Organizational Alignment" (2024)</div>
+            <div class="footnote">3. Project Management Institute, "Pulse of the Profession Report" (2024)</div>
+            <div class="footnote">4. Gallup, "State of the Global Workplace" (2024)</div>
+            <div class="footnote">5. Deloitte, "Strategic Misalignment: The Hidden Cost of Growth" (2023)</div>
+            <div class="footnote">6. MIT Sloan Management Review, "Culture and Performance Study" (2024)</div>
+            <div class="footnote">7. Stanford Business School, "Innovation Through Coordination" (2024)</div>
+            <div class="footnote">8. Journal of Applied Psychology, "Team Facilitation and Performance" (2023)</div>
+            <div class="footnote">9. Boston Consulting Group, "Speed and Alignment in Product Development" (2024)</div>
+            <div class="footnote">10. Nielsen Norman Group, "Design Debt in Scaling Organizations" (2024)</div>
+            <div class="footnote">11. Corporate Leadership Council, "Engagement Through Development" (2024)</div>
+            <div class="footnote">12. Harvard Business Review, "Leadership Development ROI Study" (2023)</div>
+            <div class="footnote">13. Decision Sciences Institute, "Group Decision Making Efficiency" (2024)</div>
+            <div class="footnote">14. Microsoft Work Trend Index, "Meeting Effectiveness Research" (2024)</div>
+            <div class="footnote">15. Project Management Journal, "Stakeholder Alignment Metrics" (2023)</div>
+            <div class="footnote">16. Accenture, "Innovation Velocity in Digital Organizations" (2024)</div>
+            <div class="footnote">17. Society for Human Resource Management, "Retention Strategies Study" (2024)</div>
+            <div class="footnote">18. Bain & Company, "Product-Market Fit Acceleration" (2023)</div>
+            <div class="footnote">19. MIT Technology Review, "Organizational Resilience Factors" (2024)</div>
+            <div class="footnote">20. Center for Creative Leadership, "Leadership Pipeline Development" (2024)</div>
+            <div class="footnote">21. Strategic Management Journal, "Coordination as Competitive Advantage" (2024)</div>
         </div>
 
         <!-- Footer -->
@@ -652,38 +681,12 @@
     </div>
 
     <script>
-        // Add some interactivity for the web version
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for internal links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Add hover effects to stats
-            document.querySelectorAll('.roi-stat').forEach(stat => {
-                stat.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                });
-                
-                stat.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
-
-            // CTA button functionality
-            document.querySelector('.cta-button').addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('This would redirect to your calendar booking system (Calendly, Acuity, etc.)');
-            });
-        });
+        // Auto-trigger print dialog for PDF generation
+        window.onload = function() {
+            setTimeout(function() {
+                window.print();
+            }, 500);
+        };
     </script>
 </body>
 </html>
