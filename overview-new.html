@@ -369,50 +369,70 @@
 
         /* Print styles */
         @media print {
-            body {
-                font-size: 11pt;
-                line-height: 1.4;
-            }
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        background: none !important;
+    }
 
-            .document {
-                padding: 0.75in;
-                max-width: none;
-                width: 100%;
-            }
+    body {
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+        color: #000 !important;
+    }
 
-            .header h1 {
-                font-size: 26pt;
-            }
+    .document {
+        padding: 0.75in !important;
+        max-width: none !important;
+        width: 100% !important;
+    }
 
-            .section-title {
-                font-size: 16pt;
-            }
+    .header h1 {
+        font-size: 26pt !important;
+        color: #000 !important;
+    }
 
-            .roi-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1rem;
-            }
+    .section-title,
+    .subsection-title,
+    .roi-number,
+    .roi-label,
+    .roi-description,
+    .metric-value,
+    .metric-label,
+    .persona-title,
+    h2, h3, p, li {
+        color: #000 !important;
+    }
 
-            .case-study .metrics {
-                grid-template-columns: repeat(4, 1fr);
-            }
+    .roi-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 1rem !important;
+    }
 
-            .roi-stat {
-                padding: 1rem;
-            }
+    .case-study .metrics {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
 
-            .roi-number {
-                font-size: 18pt;
-            }
+    .roi-stat,
+    .framework-box,
+    .persona-section,
+    .case-study,
+    .cta-section {
+        padding: 1rem !important;
+        break-inside: avoid !important;
+    }
 
-            .framework-box, .persona-section, .case-study, .cta-section {
-                break-inside: avoid;
-            }
+    .download-button {
+        display: none !important;
+    }
 
-            .page-break {
-                page-break-before: always;
-            }
-        }
+    .page-break {
+        page-break-before: always !important;
+    }
+}
+
 
         @page {
             margin: 0.75in;
