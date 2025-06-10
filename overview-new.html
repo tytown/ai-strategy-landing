@@ -369,41 +369,35 @@
 
         /* Print styles */
         @media print {
-    * {
-        margin: 0 !important;
-        padding: 0 !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        background: none !important;
+    /* Fix readability: make only the gray text darker */
+    .tagline,
+    .credentials,
+    .roi-label,
+    .roi-description,
+    .footer,
+    .footnotes,
+    li,
+    p {
+        color: #222 !important;
     }
 
-    body {
-        font-size: 11pt !important;
+    /* Maintain layout but reduce excessive white space */
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    p,
+    li {
+        margin-top: 0 !important;
+        margin-bottom: 0.75rem !important;
         line-height: 1.4 !important;
-        color: #000 !important;
     }
 
     .document {
         padding: 0.75in !important;
         max-width: none !important;
         width: 100% !important;
-    }
-
-    .header h1 {
-        font-size: 26pt !important;
-        color: #000 !important;
-    }
-
-    .section-title,
-    .subsection-title,
-    .roi-number,
-    .roi-label,
-    .roi-description,
-    .metric-value,
-    .metric-label,
-    .persona-title,
-    h2, h3, p, li {
-        color: #000 !important;
     }
 
     .roi-grid {
@@ -431,8 +425,18 @@
     .page-break {
         page-break-before: always !important;
     }
-}
 
+    /* Optional: tweak spacing after footnotes and sections */
+    .footnotes {
+        padding-top: 1rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .section-title {
+        margin-top: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
 
         @page {
             margin: 0.75in;
